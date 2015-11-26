@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Brad Claringbold || Protfolio</title>
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+    <link type="text/css" rel="stylesheet" href="/stylesheets/styles.css" />
+    
+    
+  </head>
+  <body>
+    
+    <div class="container-fluid">
+        <div class="nav">
+            <div class="col-md-1 col-xs-12 text-center">
+            </div>
+            
+            <div class="col-md-10 col-xs-12 text-center">
+              <ul class="nav navbar-nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About Me</a></li>
+                <li><a href="/projects">Projects</a></li>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/contact">Contact Me</a></li>
+              </ul>
+             
+              <ul class="nav navbar-nav navbar-right">         
+                                 
+            <% if (displayName) { %>
+                <li><a href="#">Hello, <%= displayName %></a></li>
+               <!-- <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Hello, <%= displayName %> <span class="caret"></span></a>
+                    <ul class="dropdown-menu">-->
+                        <li><a href="/contacts">Contacts</a></li>
+                        <li><a href="/users">Users</a></li>
+                        <li><a href="/logout">Logout</a></li>
+                   <!-- </ul> -->
+                </li>
+             <% } else { %>
+                <li><a href="/login">Login</a></li>
+              <% } %>
+                 
+                 <div class="col-md-1 col-xs-12 text-center">
+                 </div>
+                  
+              </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <div class="jumbotron">
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                        <img src="/images/logo.png" alt="Brad Claringbold" class="img-responsive">
+                    </div>
+                    <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
