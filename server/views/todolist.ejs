@@ -57,7 +57,7 @@
 
             <div class="panel panel-primary">
                 <div class="panel-heading">
-                    <div class="panel-title">{{ todo.name }}</div>
+                    <div class="panel-title"><stong>{{ todo.name }}</strong></div>
                 </div><!-- panel-heading -->
                 
                 <div class="panel-body">
@@ -65,20 +65,22 @@
                     <div class="panel panel-default">
                         <div class="panel-heading"><strong>Notes</strong></div>
                         <div class="panel-body">
-                                <h4><strong>Complete? <input type="checkbox" ng-model="todo.completed"></stong></h4>
-                                <p></p>
                                 <textarea ng-model="todo.note" class="form-control"></textarea>
-                                
-                                <br>
-                                <div class="btn-group">
-                                <p>
-                                        <button type="button" title="Save" ng-click="update()" class="btn btn-success"><i class="fa fa-save"></i> Save</button>
-                                        <button type="button" title="Delete" ng-click="remove()" class="btn btn-danger"><i class="fa fa-trash-o"></i> Delete</button>
-                                        <button type="button" title="Cancel" ng-click="cancel()" class="btn btn-default"><i class="fa fa-undo"></i> Cancel</button>
-                                </p>
-                                </div> <!-- btn-group -->
                         </div> <!-- nested-panel-body -->
-                    </div> <!-- nested-panel panel-default -->
+                        
+                        <div class="panel-footer">
+                        <h4><strong>Complete? <input type="checkbox" ng-model="todo.completed"></stong></h4>
+                        </div>
+                   </div> <!-- nested-panel panel-default -->
+                   
+                   <div class="btn-group">
+                   <p>
+                   <button type="button" title="Save" ng-click="update()" class="btn btn-success"><i class="fa fa-save"></i> Save</button>
+                   <button type="button" title="Delete" ng-click="remove()" class="btn btn-danger"><i class="fa fa-trash-o"></i> Delete</button>
+                   <button type="button" title="Cancel" ng-click="cancel()" class="btn btn-default"><i class="fa fa-undo"></i> Cancel</button>
+                   </p>
+                </div> <!-- btn-group -->
+
                 </div> <!-- panel-body -->
             </div> <!-- panel panel-default -->
 
