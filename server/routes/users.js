@@ -47,6 +47,7 @@ router.post('/add', requireAuth, function (req, res, next) {
         email: req.body.email,
         password: hashedPassword,
         displayName: req.body.displayName,
+        username: req.body.username,
         provider: 'local',
         created: Date.now(),
         updated: Date.now()

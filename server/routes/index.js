@@ -95,4 +95,15 @@ router.get('/services', function(req, res, next) {
     displayName: req.user ? req.user.displayName : '' });
 });
 
+
+/* Show Todo List Page */
+router.get('/todolist', function (req, res, next) {
+
+        res.render('todolist', {
+            title: 'Todo List',
+            displayName: req.user ? req.user.displayName : '',
+            username: req.user ? req.user.username : '' 
+        });
+});
+
 module.exports = router;

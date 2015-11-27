@@ -23,7 +23,7 @@ mongoose.connection.on('error', function() {
 var routes = require('./server/routes/index');
 var users = require('./server/routes/users');
 var contacts = require('./server/routes/contacts');
-
+var todos = require('./server/routes/todos');
 
 //var register =  require('./routes/register');
 
@@ -58,7 +58,7 @@ app.use(passport.session());
 app.use('/', routes);
 app.use('/users', users);
 app.use('/contacts', contacts);
-
+app.use('/todos', todos);
 
 //app.use('/cregister', register);
 
