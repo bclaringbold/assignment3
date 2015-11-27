@@ -100,7 +100,7 @@ router.get('/services', function(req, res, next) {
 router.get('/todolist', function (req, res, next) {
 
         res.render('todolist', {
-            title: 'Todo List',
+            title: 'To Do List',
             displayName: req.user ? req.user.displayName : '',
             username: req.user ? req.user.username : '' 
         });
