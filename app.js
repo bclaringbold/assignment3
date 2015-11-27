@@ -24,6 +24,7 @@ var routes = require('./server/routes/index');
 var users = require('./server/routes/users');
 var contacts = require('./server/routes/contacts');
 
+
 //var register =  require('./routes/register');
 
 var app = express();
@@ -57,6 +58,7 @@ app.use(passport.session());
 app.use('/', routes);
 app.use('/users', users);
 app.use('/contacts', contacts);
+
 
 //app.use('/cregister', register);
 
