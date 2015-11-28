@@ -29,9 +29,8 @@ router.post('/', requireAuth, function(req, res, next){
 router.get('/', requireAuth, function(req, res, next){
    todo.find(function(err, todos){
        if (err) {
-           return next(err);
-       }
-       res.json(todos)
+         return next(err);}
+       res.json(todos);
    }); 
 });
 
@@ -55,7 +54,7 @@ router.put('/:id', requireAuth, function(req,res, next){
 
 /* DELETE /todos/:id */
 router.delete('/:id', requireAuth, function(req,res,next){
-   Todo.findByIdAndRemove(req.params.id, req.body, function(err,post){
+   todo.findByIdAndRemove(req.params.id, req.body, function(err,post){
       if(err) {return next(err);}
        res.json(post);
    });

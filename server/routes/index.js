@@ -4,6 +4,16 @@ var router = express.Router();
 
 var User = require('../models/user');
 
+/* Utility function to check if user is authenticatd */
+function requireAuth(req, res, next){
+
+  // check if the user is logged in
+  if(!req.isAuthenticated()){
+    return res.redirect('/login');
+  }
+  next();
+}
+
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -97,7 +107,7 @@ router.get('/services', function(req, res, next) {
 
 
 /* Show Todo List Page */
-router.get('/todolist', function (req, res, next) {
+router.get('/todolist', requireAuth, function (req, res, next) {
 
         res.render('todolist', {
             title: 'To Do List',
