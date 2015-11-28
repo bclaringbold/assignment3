@@ -74,6 +74,5 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-public/lib
 bower_components
 typings
